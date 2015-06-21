@@ -4,6 +4,10 @@ body {
     font-family: 'Varela Round', sans-serif;
 }
 
+@media (max-width: 600px) {
+    body{font-size: 2em}
+}
+
 header {
     top: 0px;
     display: block;
