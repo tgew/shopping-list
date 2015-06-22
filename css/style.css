@@ -57,3 +57,7 @@ i {
 .stats {
     padding: 0.6em 0;
 }
+
+#item3, #item4 {
+    text-decoration: line-through;
+}
