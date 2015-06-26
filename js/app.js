@@ -42,4 +42,16 @@ $(document).ready(function() {
     });
     
     
+    function statusUpdate() {
+        var $list = $(this);
+        var total = $this.length;
+        var checked = 0;
+        $this.each(function() {
+            if ($this.hasClass('checked')) {
+                checked++;
+                }
+        });
+        
+    }
+    
 });
