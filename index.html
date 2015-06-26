@@ -11,15 +11,15 @@
     <script src="js/app.js"></script>
 </head>
 <body>
-    <div class="wrapper">
+    <div id="wrapper">
         <header>Shoppin' List</header>
-        <div class="add_new">Add New Item<i class="fa fa-plus-square fa-lg" id="add_button"></i></div>    
+        <input class="add_new" type="text" placeholder="Add New Item"></input>    
             <div class="checkbox" id="1"></div>
         <div class="list">
-            <div class="list_item" id="item1"><i class="fa fa-square-o"></i>Eggs</div>
-            <div class="list_item" id="item2"><i class="fa fa-square-o"></i>Wine</div>
-            <div class="list_item" id="item3"><i class="fa fa-check-square-o"></i>Cheese</div>
-            <div class="list_item" id="item4"><i class="fa fa-check-square-o"></i>Yogurt</div>
+            <div class="unchecked" id="item1"><i class="fa fa-square-o"></i>Eggs</div>
+            <div class="unchecked" id="item2"><i class="fa fa-square-o"></i>Wine</div>
+            <div class="checked" id="item3"><i class="fa fa-check-square-o"></i>Cheese</div>
+            <div class="checked" id="item4"><i class="fa fa-check-square-o"></i>Yogurt</div>
         </div>
         <div class="remove">Remove Checked Items</div>
         <div class="stats">2 items checked.  2 items left to get.</div>
