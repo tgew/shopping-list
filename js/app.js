@@ -17,31 +17,29 @@ $(document).ready(function() {
 //  update the .stats
     
 //  var $wrapper = $('#wrapper');
-    $('list').click(function() {
-//        this.addClass('checked');
-        this.console.log('list clicked');
+    $('li').click(function() {
+        $(this).toggleClass('checked'); 
+        if ($(this).find('i').hasClass('fa fa-check-square-o')) {
+            $(this).find('i').attr("class", "fa fa-square-o");
+        } else {
+            $(this).find('i').attr("class", "fa fa-check-square-o");
+        }
+        
+//        console.log(this);
     });
-    
-//$('.list_item').click(function() {
-//    $(
-//    var clicked_html = $(this).html();
-//    $(this).slideUp();
-//    $('.stats').text(clicked_html);
-//
-//});    
-    
-//$('.list_item').click(function() {
-//    var clicked_html = $(this).html();
-//    $(this).slideUp();
-//    $('.stats').text(clicked_html);
-//
-//});
+
     
 // CLICKING ON REMOVE CHECKED ITEMS
 // cycle through all .list_items 
 //  if .list_item has fa-check-square-o then remove the .list_item
 //
-    
+    $('.remove').click(function() {
+        $('li').each(function() {
+            if ($(this).find('i').hasClass('fa fa-check-square-o')) {
+            $(this).remove();
+            }
+        })
+    });
     
     
 });

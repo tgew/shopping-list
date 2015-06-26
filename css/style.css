@@ -36,7 +36,6 @@ header {
 .list_item, .add_new {
     padding: 0.4em;
     width: 100%;
-/*    display: flex;*/
 }
 
 i {
@@ -59,6 +58,16 @@ i {
 }
 
 .unchecked {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0.8em;
+}
+
+li {
+    padding: .5em 0;
     text-decoration: none;
 }
     
