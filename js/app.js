@@ -16,7 +16,7 @@ $(document).ready(function() {
 //      remove the line through
 //  update the .stats
     
-//  var $wrapper = $('#wrapper');
+
     $('li').click(function() {
         $(this).toggleClass('checked'); 
         if ($(this).find('i').hasClass('fa fa-check-square-o')) {
@@ -24,10 +24,9 @@ $(document).ready(function() {
         } else {
             $(this).find('i').attr("class", "fa fa-check-square-o");
         }
-        
+    statusUpdate($('li'));
 //        console.log(this);
     });
-
     
 // CLICKING ON REMOVE CHECKED ITEMS
 // cycle through all .list_items 
@@ -39,19 +38,25 @@ $(document).ready(function() {
             $(this).remove();
             }
         })
+        statusUpdate($('li'));
     });
     
     
-    function statusUpdate() {
-        var $list = $(this);
-        var total = $this.length;
+    function statusUpdate(list_object) {
+        var $list = $(list_object);
+        var total = $list.length;
+        
         var checked = 0;
-        $this.each(function() {
-            if ($this.hasClass('checked')) {
+        $list.each(function() {
+            if ($(this).hasClass('checked')) {
                 checked++;
                 }
         });
         
+        total = total-checked;
+        
+        $('.stats').text(checked + " items checked.  " + total + " items left to get.");
+//        });
     }
     
-});
+});  // Document Ready closure
