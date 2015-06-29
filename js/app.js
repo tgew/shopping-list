@@ -5,6 +5,7 @@ $(document).ready(function() {
     $('#target').submit(function(event) {
         $('ul').append("<li><i class=\"fa fa-square-o\"></i>" + $('.add_new').val() + "</li>");
         statusUpdate($('li'));
+        $('.add_new').val('');
         event.preventDefault();
     });
     
