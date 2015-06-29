@@ -30,16 +30,16 @@ header {
     margin-top: 0.4em;
 }
 
-.wrapper {
+#wrapper {
 /*    display: flex;*/
     max-width: 30em;
     margin-left: auto;
     margin-right: auto;
 }
 
-.list_item, .add_new, button {
+.list_item, .add_new {
     padding: 0.4em;
-/*    display: flex;*/
+    width: 100%;
 }
 
 i {
@@ -53,11 +53,28 @@ i {
     font-style: italic;
 }
 
-#add_button {
-    padding: .1em 0 0 0;
-    float: right;
-}
-
 .stats {
     padding: 0.6em 0;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+.unchecked {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0.8em;
+}
+
+li {
+    padding: .5em 0;
+    text-decoration: none;
+}
+    
+#add_button {
+    display: none;
 }
