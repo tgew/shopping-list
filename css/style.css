@@ -71,7 +71,6 @@ li {
     text-decoration: none;
 }
     
-
-#item3, #item4 {
-/*    text-decoration: line-through;*/
+#add_button {
+    display: none;
 }
