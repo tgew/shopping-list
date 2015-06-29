@@ -1,23 +1,17 @@
 $(document).ready(function() {
 
 // ADDING AN ITEM    
-// when click on .add_new
-//  make the div editable
-// when click on #add_button
-//  create a new .list_item with html text set to .add_new html text
+   
+    $('#target').submit(function(event) {
+        $('ul').append("<li><i class=\"fa fa-square-o\"></i>" + $('.add_new').val() + "</li>");
+        statusUpdate($('li'));
+        event.preventDefault();
+    });
+    
     
 // CLICKING ON A CHECKBOX
-// when click on .i
-//  if fa-square-o (unchecked)
-//      replace #item# fa-square-o with fa-check-square-o
-//      change text decoration to line through on #item#
-//  if fa-check-square-o
-//      check it
-//      remove the line through
-//  update the .stats
-    
 
-    $('li').click(function() {
+    $('ul').on('click', 'li', function() {
         $(this).toggleClass('checked'); 
         if ($(this).find('i').hasClass('fa fa-check-square-o')) {
             $(this).find('i').attr("class", "fa fa-square-o");
@@ -25,13 +19,10 @@ $(document).ready(function() {
             $(this).find('i').attr("class", "fa fa-check-square-o");
         }
     statusUpdate($('li'));
-//        console.log(this);
     });
     
 // CLICKING ON REMOVE CHECKED ITEMS
-// cycle through all .list_items 
-//  if .list_item has fa-check-square-o then remove the .list_item
-//
+
     $('.remove').click(function() {
         $('li').each(function() {
             if ($(this).find('i').hasClass('fa fa-check-square-o')) {
@@ -41,6 +32,8 @@ $(document).ready(function() {
         statusUpdate($('li'));
     });
     
+ 
+// UPDATE THE LIST STATS
     
     function statusUpdate(list_object) {
         var $list = $(list_object);
